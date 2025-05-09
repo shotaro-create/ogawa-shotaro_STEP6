@@ -21,7 +21,7 @@
     </aside>
         
     <main>
-        <form action="confilm.php" method="POST">
+        <form action="confirm.php" method="POST">
             <table id="dataTable">
                 <tr>
                     <th>お名前</th>
@@ -41,7 +41,7 @@
                 </tr>
                 <tr>
                     <th>お問い合わせ内容</th>
-                    <td><textarea name="contactContent" id="contactContent"></textarea></td>
+                    <td><textarea name="message" id="message"></textarea></td>
                 </tr>
             </table>
             <div class="sendButton-wrapper">

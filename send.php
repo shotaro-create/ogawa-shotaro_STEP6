@@ -7,11 +7,11 @@
     $companyName = htmlspecialchars($_POST['companyName'], ENT_QUOTES, 'UTF-8');
     $email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
     $age = htmlspecialchars($_POST['age'], ENT_QUOTES, 'UTF-8');
-    $contactContent = htmlspecialchars($_POST['contactContent'], ENT_QUOTES, 'UTF-8');
+    $message = htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8');
 
     $to = 'sh.tar.ngzk@gmail.com'; 
     $subject = 'お問い合わせフォームからのメッセージ';
-    $message = <<<EOT
+    $content = <<<EOT
     以下の内容でお問い合わせを受け付けました。
 
     お名前: {$username}
@@ -39,7 +39,7 @@
         <h1>お問い合わせフォーム - 送信完了画面</h1>
         <?php 
             // メール送信
-            $success = mail($to, $subject, $message, $headers);
+            $success = mail($to, $subject, $content, $headers);
 
             if ($success) {
                 echo "お問い合わせが送信されました。ありがとうございます！";

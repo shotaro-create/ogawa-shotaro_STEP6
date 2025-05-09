@@ -6,7 +6,7 @@ sendButton.addEventListener('click', (e) => {
     let username = document.getElementById('username').value.trim();
     let companyName = document.getElementById('companyName').value.trim();
     let email = document.getElementById('email').value.trim();
-    let contactContent = document.getElementById('contactContent').value.trim();
+    let message = document.getElementById('message').value.trim();
 
     if (username === "") {
         alert('必須項目が未入力です。入力内容をご確認ください。');
@@ -23,19 +23,19 @@ sendButton.addEventListener('click', (e) => {
         e.preventDefault(); // 送信をキャンセル
         return false;
     }
-    if (contactContent === "") {
+    if (message === "") {
         alert('必須項目が未入力です。入力内容をご確認ください。');
         e.preventDefault(); // 送信をキャンセル
         return false;
     }
 
-    let message = `以下の内容を本当に送信しますか？\n\n` +
+    let content = `以下の内容を本当に送信しますか？\n\n` +
         `お名前：${username}\n` +
         `会社名：${companyName}\n` +
         `メールアドレス：${email}\n` +
-        `お問い合わせ内容：${contactContent}`;
+        `お問い合わせ内容：${message}`;
     
-    let isConfirmed = confirm(message);
+    let isConfirmed = confirm(content);
     if (!isConfirmed) {
         e.preventDefault();
         return false;

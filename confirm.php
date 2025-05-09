@@ -7,7 +7,7 @@
     $companyName = htmlspecialchars($_POST['companyName'], ENT_QUOTES, 'UTF-8');
     $email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
     $age = htmlspecialchars($_POST['age'], ENT_QUOTES, 'UTF-8');
-    $contactContent = htmlspecialchars($_POST['contactContent'], ENT_QUOTES, 'UTF-8');
+    $message = htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8');
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -61,7 +61,7 @@
                 <tr>
                     <th>お問い合わせ内容</th>
                     <td>
-                        <?php echo $contactContent; ?>
+                        <?php echo $message; ?>
                     </td>
                 </tr>
             </table>
@@ -71,7 +71,7 @@
             <input type="hidden" name="companyName" value="<?php echo $companyName; ?>">
             <input type="hidden" name="email" value="<?php echo $email; ?>">
             <input type="hidden" name="age" value="<?php echo $age; ?>">
-            <input type="hidden" name="contactContent"  value="<?php echo $contactContent; ?>">
+            <input type="hidden" name="message"  value="<?php echo $message; ?>">
 
 
             <div class="backButton-wrapper">
